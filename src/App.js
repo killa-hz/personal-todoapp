@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Header from './components/Header';
+import InputBox from './components/InputBox';
+import TodoList from './components/TodoList';
 
 function App() {
+  const [items, setItems] = useState([]);
+
+  function addNewItem(item) {
+    setItems((prevState) => {
+      return [...prevState, item];
+    });
+  }
+
+  function deleteItem(item) {
+    setItems((prevState) => {
+      return prevState.filter((items, index) => {
+        return index !== item;
+      });
+    });
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header />
+      <InputBox onAdd={addNewItem} />
+      <TodoList
+        todoItem="item number one"
+        listItems={items}
+        onDelete={deleteItem}
+      />
     </div>
   );
 }

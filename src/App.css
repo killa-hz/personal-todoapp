@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Noto+Serif&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navBar {
+  padding: 16px;
+  background-color: #d32626;
+  box-shadow: 0 0 10px 0 #999999;
+}
+.headingText {
+  font-family: 'Noto Serif', serif;
+  font-weight: 400;
+  font-size: 1.75rem;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+}
+.inputBox {
+  position: relative;
+  width: 500px;
+  margin: 30px auto 20px auto;
+  padding: 15px;
+  box-shadow: 0 1px 5px #999999;
+}
+.todoInput {
+  border: none;
+  padding: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  outline: none;
+}
+.todoButton {
+  position: absolute;
+  right: 17px;
+  bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+.todoButton:hover {
+  color: #d32626;
+}
+.todoList {
+  position: relative;
+  width: 80%;
+  margin: 30px auto 20px auto;
+  padding: 15px;
+}
+ul {
+  list-style-type: none;
+}
+.todoItem {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  padding: 15px;
+}
+.todoItem:hover {
+  color: #d32626;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* .finishedButton {
+  position: absolute;
+  right: 5px;
+  bottom: 20px;
+  border: none;
+  background-color: inherit;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.finishedButton:hover {
+  color: #d32626;
+} */
