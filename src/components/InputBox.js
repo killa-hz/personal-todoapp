@@ -8,7 +8,7 @@ const InputBox = (props) => {
   }
 
   function handleClick(e) {
-    props.onAdd(input);
+    input !== '' && props.onAdd(input);
     e.preventDefault();
     setInput('');
   }

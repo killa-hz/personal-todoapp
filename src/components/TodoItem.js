@@ -1,8 +1,8 @@
 import React from 'react';
 
 const TodoItem = (props) => {
-  function handleClick(id) {
-    props.onDelete(id);
+  function handleClick() {
+    props.onDelete(props.id);
   }
 
   return (

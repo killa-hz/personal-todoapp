@@ -5,25 +5,18 @@
   padding: 0;
   margin: 0;
 }
+body {
+  background-color: #e4e3e3;
+}
 
-.navBar {
-  padding: 16px;
-  background-color: #d32626;
-  box-shadow: 0 0 10px 0 #999999;
-}
-.headingText {
-  font-family: 'Noto Serif', serif;
-  font-weight: 400;
-  font-size: 1.75rem;
-  letter-spacing: 1.5px;
-  color: #ffffff;
-}
-.inputBox {
+.wrapper {
   position: relative;
   width: 500px;
-  margin: 30px auto 20px auto;
+  margin: 60px auto 20px auto;
   padding: 15px;
   box-shadow: 0 1px 5px #999999;
+  border-radius: 5%;
+  background-color: #ffffff;
 }
 .todoInput {
   border: none;
@@ -36,7 +29,7 @@
 .todoButton {
   position: absolute;
   right: 17px;
-  bottom: 20px;
+  top: 20px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 1.4rem;
@@ -53,30 +46,15 @@
   margin: 30px auto 20px auto;
   padding: 15px;
 }
-ul {
-  list-style-type: none;
-}
+
 .todoItem {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 1.2rem;
   padding: 15px;
+  list-style-type: none;
 }
 .todoItem:hover {
   color: #d32626;
   cursor: pointer;
 }
-
-/* .finishedButton {
-  position: absolute;
-  right: 5px;
-  bottom: 20px;
-  border: none;
-  background-color: inherit;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 1.2rem;
-}
-.finishedButton:hover {
-  color: #d32626;
-} */

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import Header from './components/Header';
 import InputBox from './components/InputBox';
-import TodoList from './components/TodoList';
+import TodoItem from './components/TodoItem';
 
 function App() {
   const [items, setItems] = useState([]);
@@ -13,23 +12,29 @@ function App() {
     });
   }
 
-  function deleteItem(item) {
+  function deleteItem(id) {
     setItems((prevState) => {
-      return prevState.filter((items, index) => {
-        return index !== item;
+      return prevState.filter((item, index) => {
+        return index !== id;
       });
     });
   }
 
   return (
     <div className="container">
-      <Header />
-      <InputBox onAdd={addNewItem} />
-      <TodoList
-        todoItem="item number one"
-        listItems={items}
-        onDelete={deleteItem}
-      />
+      <div className="wrapper">
+        <InputBox onAdd={addNewItem} />
+        <div className="todoList">
+          {items.map((item, index) => (
+            <TodoItem
+              id={index}
+              key={index}
+              content={item}
+              onDelete={deleteItem}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
