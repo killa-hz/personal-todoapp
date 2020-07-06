@@ -49,13 +49,28 @@ body {
 }
 
 .todoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 1.2rem;
   padding: 15px;
   list-style-type: none;
 }
-.todoItem:hover {
-  color: #d32626;
+.todoItem button {
+  border: none;
+
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #ffffff;
   cursor: pointer;
+}
+.doneButton {
+  background-color: #d32626;
+}
+.duplicateButton {
+  background-color: #ffa931;
 }

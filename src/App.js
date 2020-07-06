@@ -12,6 +12,12 @@ function App() {
     });
   }
 
+  function duplicateItem(content) {
+    setItems((prevState) => {
+      return [...prevState, content];
+    });
+  }
+
   function deleteItem(id) {
     setItems((prevState) => {
       return prevState.filter((item, index) => {
@@ -31,6 +37,7 @@ function App() {
               key={index}
               content={item}
               onDelete={deleteItem}
+              again={duplicateItem}
             />
           ))}
         </div>
